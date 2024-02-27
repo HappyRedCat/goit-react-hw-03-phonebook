@@ -9,8 +9,6 @@ import {
   AddContactBtn,
 } from './PhoneBookForm.styled';
 
-import { HiOutlineUser, HiOutlinePhone } from 'react-icons/hi';
-
 const FormSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').required('This field is required!'),
   number: Yup.number().min(2, 'Too Short!').required('This field is required!'),
@@ -33,7 +31,6 @@ const PhonebookForm = ({ onAdd }) => {
         <LabelWrapper>
           Name
           <LabelForm>
-            <HiOutlineUser />
             <StyledField name="name" placeholder="Type the NAME" />
           </LabelForm>
           <ErrorMsg name="name" component="p" />
@@ -42,7 +39,6 @@ const PhonebookForm = ({ onAdd }) => {
         <LabelWrapper>
           Number
           <LabelForm>
-            <HiOutlinePhone />
             <StyledField
               type="tel"
               name="number"
